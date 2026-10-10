@@ -18,11 +18,502 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.6.2",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 97.5,
+              "y": 199.99999999999977
+            },
+            "size": {
+              "width": 290,
+              "height": 390
+            },
+            "attrs": {
+              "label": {
+                "text": "Trust Boundary"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "ae1181b0-5e15-42fa-a8be-1a66c55740cd",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "e735a410-b33d-4285-8d44-8532e6856ccf"
+              ],
+              "containedElements": [
+                "c8fdd51b-cc04-4ae6-a0bc-ac3ff9b3bd04",
+                "b304235d-1d5e-42db-ae99-ab37a7658978"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 182.5,
+              "y": 79.99999999999986
+            },
+            "size": {
+              "width": 120,
+              "height": 50
+            },
+            "attrs": {
+              "text": {
+                "text": "Pasien"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "288001f0-fdef-4ff3-9940-622b4bf4d406"
+                },
+                {
+                  "group": "right",
+                  "id": "6c7d64c5-eb1c-4d8e-b22b-4cf1e14bf5b0"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4909e985-5597-4a53-a8f7-e2c9d5a300b9"
+                },
+                {
+                  "group": "left",
+                  "id": "414f5670-3120-4759-88e0-2580b81924a8"
+                }
+              ]
+            },
+            "id": "89d513a0-47e1-48ec-9db7-9975d21ef990",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Pasien",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 152.5,
+              "y": 240
+            },
+            "size": {
+              "width": 180,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Aplikasi Portal Klinik"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "df88d4d2-7c01-4628-b7c2-41f4137e726d"
+                },
+                {
+                  "group": "right",
+                  "id": "6607473d-6f53-46f0-a5db-30104c030bb0"
+                },
+                {
+                  "group": "bottom",
+                  "id": "18bd6102-2e6d-42f7-a2d6-f78433d5f2a0"
+                },
+                {
+                  "group": "left",
+                  "id": "61c48271-aeed-46ed-ac87-806fffeb23cc"
+                }
+              ]
+            },
+            "id": "c8fdd51b-cc04-4ae6-a0bc-ac3ff9b3bd04",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Process",
+              "name": "Aplikasi Portal Klinik",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Mengambil rekam medis",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Mengambil rekam medis"
+            ],
+            "id": "e7e1542a-e6ab-4e97-b37c-7567456ab978",
+            "source": {
+              "cell": "c8fdd51b-cc04-4ae6-a0bc-ac3ff9b3bd04",
+              "port": "18bd6102-2e6d-42f7-a2d6-f78433d5f2a0"
+            },
+            "target": {
+              "cell": "b304235d-1d5e-42db-ae99-ab37a7658978",
+              "port": "85ee2ada-482d-4e6a-b015-f76f4dd07bf9"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Permintaan rekam medis",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ae1181b0-5e15-42fa-a8be-1a66c55740cd"
+              ]
+            },
+            "labels": [
+              "Permintaan rekam medis"
+            ],
+            "id": "e735a410-b33d-4285-8d44-8532e6856ccf",
+            "source": {
+              "cell": "89d513a0-47e1-48ec-9db7-9975d21ef990",
+              "port": "4909e985-5597-4a53-a8f7-e2c9d5a300b9"
+            },
+            "target": {
+              "cell": "c8fdd51b-cc04-4ae6-a0bc-ac3ff9b3bd04",
+              "port": "df88d4d2-7c01-4628-b7c2-41f4137e726d"
+            },
+            "vertices": []
+          },
+          {
+            "position": {
+              "x": 147.5,
+              "y": 460
+            },
+            "size": {
+              "width": 190,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "Server Database Rumah Sakit"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "85ee2ada-482d-4e6a-b015-f76f4dd07bf9"
+                },
+                {
+                  "group": "right",
+                  "id": "153d7a9f-652e-43c7-bd63-1dcda05c620d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "bc2ac9be-2bb8-4ed9-b8ae-33e0beaae6aa"
+                },
+                {
+                  "group": "left",
+                  "id": "0fbd9ebd-e591-4105-8015-fce7cb94bcad"
+                }
+              ]
+            },
+            "id": "b304235d-1d5e-42db-ae99-ab37a7658978",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "Server Database Rumah Sakit",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
