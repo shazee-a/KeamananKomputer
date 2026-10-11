@@ -173,7 +173,7 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Spoofing",
-                  "description": "Ancaman pencurian data pasien di WiFi publik dan berpura-pura menjadi pasien yang sah untuk mengakses portal.",
+                  "description": "Ancaman mencuri data pasien di WiFi publik dan berpura-pura menjadi pasien yang sah untuk mengakses portal.",
                   "mitigation": "Menerapkan mekanisme autentikasi yang kuat, seperti Multi-Factor Authentication (MFA) atau manajemen sesi yang aman.",
                   "modelType": "STRIDE",
                   "new": false,
@@ -182,7 +182,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             }
@@ -358,7 +358,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             },
@@ -572,6 +572,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 4
+    "threatTop": 5
   }
 }
