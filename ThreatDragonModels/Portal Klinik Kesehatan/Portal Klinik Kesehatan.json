@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "ae1181b0-5e15-42fa-a8be-1a66c55740cd",
             "zIndex": -1,
+            "id": "ae1181b0-5e15-42fa-a8be-1a66c55740cd",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -66,13 +66,14 @@
                 "text": "Pasien"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -156,7 +157,6 @@
               ]
             },
             "id": "89d513a0-47e1-48ec-9db7-9975d21ef990",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Pasien",
@@ -164,9 +164,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5ac92baa-f4ff-4689-9656-9cc8af352ef2",
+                  "title": "Pemalsuan Data",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Ancaman pencurian data pasien di WiFi publik dan berpura-pura menjadi pasien yang sah untuk mengakses portal.",
+                  "mitigation": "Menerapkan mekanisme autentikasi yang kuat, seperti Multi-Factor Authentication (MFA) atau manajemen sesi yang aman.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -190,6 +208,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -273,7 +292,6 @@
               ]
             },
             "id": "c8fdd51b-cc04-4ae6-a0bc-ac3ff9b3bd04",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Aplikasi Portal Klinik",
@@ -293,54 +311,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Mengambil rekam medis",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Mengambil rekam medis"
-            ],
-            "id": "e7e1542a-e6ab-4e97-b37c-7567456ab978",
-            "source": {
-              "cell": "c8fdd51b-cc04-4ae6-a0bc-ac3ff9b3bd04",
-              "port": "18bd6102-2e6d-42f7-a2d6-f78433d5f2a0"
-            },
-            "target": {
-              "cell": "b304235d-1d5e-42db-ae99-ab37a7658978",
-              "port": "85ee2ada-482d-4e6a-b015-f76f4dd07bf9"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -361,15 +333,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "6ea9efd0-6618-4d4d-82d0-f16caac4fdfc",
+                  "title": "snifting",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Ancaman jika pasien login menggunakan WiFi publik, data rekam medis yang dikirimkan melalui jaringan bisa disadap oleh pihak lain jika tidak dienkripsi.",
+                  "mitigation": "Mengimplementasikan protokol enkripsi yang kuat seperti HTTPS/TLS untuk seluruh data flow dan mengenkripsi data rekam medis saat disimpan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "ae1181b0-5e15-42fa-a8be-1a66c55740cd"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Permintaan rekam medis"
@@ -382,6 +373,73 @@
             "target": {
               "cell": "c8fdd51b-cc04-4ae6-a0bc-ac3ff9b3bd04",
               "port": "df88d4d2-7c01-4628-b7c2-41f4137e726d"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Mengambil rekam medis",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "debd009d-56ec-4ff4-83f9-e09362d7f7d8",
+                  "title": "Pengubahan data tidak sah",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Ancaman isi data rekam medis diubah saat dalam perjalanan (in-transit) antara aplikasi portal dan server database.",
+                  "mitigation": "Menggunakan mekanisme integritas data seperti digital signature atau fungsi hashing/checksum serta memvalidasi setiap input/data yang masuk.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Mengambil rekam medis"
+            ],
+            "id": "b8ff1b34-b511-49d4-b2b0-e34fb39bb687",
+            "source": {
+              "cell": "c8fdd51b-cc04-4ae6-a0bc-ac3ff9b3bd04",
+              "port": "18bd6102-2e6d-42f7-a2d6-f78433d5f2a0"
+            },
+            "target": {
+              "cell": "b304235d-1d5e-42db-ae99-ab37a7658978",
+              "port": "85ee2ada-482d-4e6a-b015-f76f4dd07bf9"
             },
             "vertices": []
           },
@@ -409,6 +467,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -492,7 +551,6 @@
               ]
             },
             "id": "b304235d-1d5e-42db-ae99-ab37a7658978",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "Server Database Rumah Sakit",
@@ -514,6 +572,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 4
   }
 }
